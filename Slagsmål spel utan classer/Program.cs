@@ -1,8 +1,24 @@
 ﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+string val_1 = "";
+while (val_1 != "1" && val_1 != "2") {
+    Console.WriteLine("Tryck 1 för Xia Pang:下庞 Tryck 2 för Doomfist:末日铁拳");
+    val_1 = Console.ReadLine();
+}
+
+
+
+if (val_1 == "1") {
+
+Console.WriteLine("Du spelar som Xia Pang");
+} 
+
+else if (val_1 == "2") {
+    Console.WriteLine("Du spelar som Doomfist");
+}
 
 
 int  下庞Hp = 100; // jolly
-int 末日铁拳Hp = 300; // evil
+int 末日铁拳Hp = 300; // evil 
 
 
 string fighter1name = "下庞";
@@ -20,7 +36,7 @@ Console.WriteLine("\n ------ ===== 新一轮 ===== -------");
 Console.WriteLine($"{fighter1name}: {下庞Hp}  {fighter2name}:  {末日铁拳Hp}");
 
 
-int  下庞dmg = bejing.Next(50);
+int  下庞dmg = bejing.Next(70);
 
 末日铁拳Hp -= 下庞dmg;
 末日铁拳Hp = Math.Max(0, 末日铁拳Hp);
