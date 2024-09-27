@@ -18,7 +18,7 @@ else if (val_1 == "2") {
 
 
 int  下庞Hp = 100; // jolly
-int 末日铁拳Hp = 300; // evil 
+int 末日铁拳Hp = 250; // evil 
 
 
 string fighter1name = "下庞";
@@ -31,12 +31,12 @@ Random bejing = new Random();
 
 while (下庞Hp > 0 && 末日铁拳Hp > 0 )
 {
-
+Console.Clear();
 Console.WriteLine("\n ------ ===== 新一轮 ===== -------");
 Console.WriteLine($"{fighter1name}: {下庞Hp}  {fighter2name}:  {末日铁拳Hp}");
 
 
-int  下庞dmg = bejing.Next(70);
+int  下庞dmg = bejing.Next(80);
 
 末日铁拳Hp -= 下庞dmg;
 末日铁拳Hp = Math.Max(0, 末日铁拳Hp);
