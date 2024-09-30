@@ -1,77 +1,80 @@
 ﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
 string val_1 = "";
-while (val_1 != "1" && val_1 != "2") {
-    Console.WriteLine("Tryck 1 för Xia Pang:下庞 Tryck 2 för Doomfist:末日铁拳");
+while (val_1 != "1" && val_1 != "2")
+{
+    Console.WriteLine("Tryck 1 för Xia Pang Tryck 2 för Doomfist:");
     val_1 = Console.ReadLine();
 }
 
 
 
-if (val_1 == "1") {
+if (val_1 == "1")
+{
 
-Console.WriteLine("Du spelar som Xia Pang");
-} 
+    Console.WriteLine("Du spelar som Xia Pang");
+}
 
-else if (val_1 == "2") {
+else if (val_1 == "2")
+{
     Console.WriteLine("Du spelar som Doomfist");
 }
 
 
-int  下庞Hp = 100; // jolly
-int 末日铁拳Hp = 250; // evil 
+int Xia_Panghp = 100; // jolly
+int Doomfisthp = 250; // evil 
 
 
-string fighter1name = "下庞";
-string fighter2name = "末日铁拳";
+string fighter1name = "Xia_Pang";
+string fighter2name = "Doomfist";
 
 
 Random bejing = new Random();
 
 
 
-while (下庞Hp > 0 && 末日铁拳Hp > 0 )
+while (Xia_Panghp > 0 && Doomfisthp > 0)
 {
-Console.Clear();
-Console.WriteLine("\n ------ ===== 新一轮 ===== -------");
-Console.WriteLine($"{fighter1name}: {下庞Hp}  {fighter2name}:  {末日铁拳Hp}");
+    Console.Clear();
+    Console.WriteLine("\n ------ ===== Ny runda ===== -------");
+    Console.WriteLine($"{fighter1name}: {Xia_Panghp}  {fighter2name}:  {Doomfisthp}");
 
 
-int  下庞dmg = bejing.Next(80);
+    int Xia_Pangdmg = bejing.Next(80);
 
-末日铁拳Hp -= 下庞dmg;
-末日铁拳Hp = Math.Max(0, 末日铁拳Hp);
-Console.WriteLine($"{fighter1name} åstakommer {下庞dmg} dmg på {fighter2name}");
+    Doomfisthp -= Xia_Pangdmg;
+    Doomfisthp = Math.Max(0, Doomfisthp);
+    Console.WriteLine($"{fighter1name} åstakommer {Xia_Pangdmg} dmg på {fighter2name}");
 
 
-int  末日铁拳dmg = bejing.Next(20);
+    int Doomfistdmg = bejing.Next(20);
 
-下庞Hp -= 末日铁拳dmg;
-下庞Hp = Math.Max(0, 下庞Hp );
-Console.WriteLine($"{fighter2name} rocket punch gör {末日铁拳dmg}dmg på {fighter1name}");
+    Xia_Panghp -= Doomfistdmg;
+    Xia_Panghp = Math.Max(0, Xia_Panghp);
+    Console.WriteLine($"{fighter2name} rocket punch gör {Doomfistdmg}dmg på {fighter1name}");
 
-Console.WriteLine("按任一按鈕");
-Console.ReadKey();
+    Console.WriteLine("Tryck på valfri knapp");
+    Console.ReadKey();
 }
 
-Console.WriteLine("\n ----- ===== 戰鬥結束了 ===== -----");
+Console.WriteLine("\n ----- ===== Rundan är över ===== -----");
 
-if(下庞Hp == 0 &&  末日铁拳Hp == 0  )
+if (Xia_Panghp == 0 && Doomfisthp == 0)
 {
-Console.WriteLine("平局");
+    Console.WriteLine("Oavgjort!");
 
 }
 
-else if (下庞Hp == 0)
+else if (Xia_Panghp == 0)
 {
-    Console.WriteLine("末日铁拳 获胜!");
+    Console.WriteLine("Doomfist vinner!");
 }
 
 else
 {
-    Console.WriteLine("下庞 获胜! ");
+    Console.WriteLine("Xia Pang vinner!");
 }
 
-Console.WriteLine("按任意按钮关闭!");
+Console.WriteLine("Stäng av spelet med valfri knapp!");
 Console.ReadKey();
 
 
