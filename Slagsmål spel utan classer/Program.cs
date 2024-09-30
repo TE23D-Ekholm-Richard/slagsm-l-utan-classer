@@ -24,8 +24,8 @@ int Xia_Panghp = 100; // jolly
 int Doomfisthp = 250; // evil 
 
 
-string fighter1name = "Xia_Pang";
-string fighter2name = "Doomfist";
+string Kämpe1 = "Xia_Pang";
+string kämpe2 = "Doomfist";
 
 
 Random bejing = new Random();
@@ -36,21 +36,21 @@ while (Xia_Panghp > 0 && Doomfisthp > 0)
 {
     Console.Clear();
     Console.WriteLine("\n ------ ===== Ny runda ===== -------");
-    Console.WriteLine($"{fighter1name}: {Xia_Panghp}  {fighter2name}:  {Doomfisthp}");
+    Console.WriteLine($"{Kämpe1}: {Xia_Panghp}  {kämpe2}:  {Doomfisthp}");
 
 
     int Xia_Pangdmg = bejing.Next(80);
 
     Doomfisthp -= Xia_Pangdmg;
     Doomfisthp = Math.Max(0, Doomfisthp);
-    Console.WriteLine($"{fighter1name} åstakommer {Xia_Pangdmg} dmg på {fighter2name}");
+    Console.WriteLine($"{Kämpe1} åstakommer {Xia_Pangdmg} dmg på {kämpe2}");
 
 
     int Doomfistdmg = bejing.Next(20);
 
     Xia_Panghp -= Doomfistdmg;
     Xia_Panghp = Math.Max(0, Xia_Panghp);
-    Console.WriteLine($"{fighter2name} rocket punch gör {Doomfistdmg}dmg på {fighter1name}");
+    Console.WriteLine($"{kämpe2} rocket punch gör {Doomfistdmg}dmg på {Kämpe1}");
 
     Console.WriteLine("Tryck på valfri knapp");
     Console.ReadKey();
